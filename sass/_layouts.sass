@@ -1,5 +1,6 @@
 .baner
-	padding: 60px 0 65px
+	position: relative
+	padding: 60px 0 0px
 	background: url("../img/pattern.png") repeat  0 40% $blue
 	+clr
 .baner__content
@@ -8,20 +9,9 @@
 	padding: 20px 80px 50px
 	background-color: rgba(235, 235, 235, .66)
 	-webkit-border-radius: 5px
-	border-radius: 5px
 	margin: 0 auto
-	&:before,
-	&:after
-		content: ""
-		position: absolute
-		top: 50%
-		margin-top: -4%
-	&:before
-		left: -210px
-		+s(ban_l)
-	&:after
-		right: -210px
-		+s(ban_r)
+	+clr
+
 .baner__content_top
 	position: relative
 	text-align: center
@@ -48,10 +38,38 @@
 		+os
 .baner__content_bottom
 	text-align: center
+	font-size: 18px
+	color: #181818
+	+ps
 	p
 		font-size: 18px
 		color: #181818
+		margin-bottom: 10px
 		+ps
+
+.slider
+	position: relative
+	margin: 0 auto 65px
+	width: 745px
+	height: auto
+	.cycle-slideshow
+		position: static
+		overflow: hidden
+		border-radius: 5px
+		height: auto
+		+clr
+	+clr
+.js-slider-prev,
+.js-slider-next
+	position: absolute
+	top: 50%
+	margin-top: -4%
+.js-slider-prev
+	left: -210px
+	+s(ban_l)
+.js-slider-next
+	right: -210px
+	+s(ban_r)
 
 .main
 	padding-top: 35px
@@ -127,6 +145,9 @@
 			margin-bottom: 10px
 .answer
 	text-align: center
+	&:hover
+		img
+			+scale(1)
 	img
 		display: block
 		text-align: center
@@ -196,6 +217,7 @@ h3.t_red
 		display: inline-block
 		width: 260px
 		margin: 35px 32px 0 0
+		vertical-align: top
 		&:nth-child(4n)
 			margin-right: 0
 		h3
