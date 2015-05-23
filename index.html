@@ -56,12 +56,12 @@
 							</div>
 						</ul>
 					</li>
-					<li class="header__menu_item"><a href="#">новини</a></li>
+					<li class="header__menu_item"><a href="#" >новини</a></li>
 					<li class="header__menu_item"><a href="#">блог</a></li>
 					<li class="header__menu_item"><a href="#">про проект</a></li>
 				</ul>
 				<div class="header__search">
-					<input type="text" name="" class="header__search-inp">
+					<input type="text" name="any" value="" class="header__search-inp">
 					<button></button>
 				</div>
 			</div>
@@ -182,7 +182,7 @@
 					<h3 class="t_red">Balcony garment</h3>
 				</div>
 			</a>
-			<div class="ban ban__border">
+			<a href="#" class="ban ban__border">
 				<div class="ban__img t35">
 					<img src="img/b4-1.png" alt="">
 				</div>
@@ -191,7 +191,7 @@
 					<div class="line line__red_thin"></div>
 					<p><em>Мінеральна пудра від бренду <span>MYRIAM</span></em></p>
 				</div>
-			</div>
+			</a>
 			<a href="#" class="ban ">
 				<div class="ban__img ">
 					<img src="img/b5.png" alt="">
@@ -205,11 +205,11 @@
 	</div>
 	<div class="section">
 		<div class="l_layout">
-			<h2 class="section__title">Новини</h2>
+			<h2 class="section__title" >Новини</h2>
 			<div class="section__content">
 				<div class="section__item">
 					<h3>Українські товари для європейських магазинів</h3>
-					<p>З сьогоднішнього дня набирає чинності рішення Ради Європейського Союзу про одностороннього скасування мита на українські товари. Ці преференції будуть діяти тимчасово, до 1 листопада.</p><p>lorem600</p>
+					<p>З сьогоднішнього дня набирає чинності рішення Ради Європейського Союзу про одностороннього скасування мита на українські товари. Ці преференції будуть діяти тимчасово, до 1 листопада.</p>
 				</div>
 				<div class="section__item">
 					<h3>Українські товари для європейських магазинів</h3>
@@ -230,11 +230,15 @@
 		<h3>Оформити підписку на новини</h3>
 		<div class="line line__yellow"></div>
 		<p>Дізнавайтеся першими про нові товари українського виробника</p>
-		<div class="subscribe__form">
-			<input type="text" name=""  placeholder="Ваше ім'я">
-			<input type="text" name=""  placeholder="Email">
+		<form class="subscribe__form js-validate">
+			<div class="form__name">
+				<input type="text" name="username" required placeholder="Ваше ім'я">
+			</div>
+			<div class="form__mail">
+				<input type="text" name="email" required placeholder="Email">
+			</div>
 			<button>Підписатися</button>
-		</div>
+		</form>
 	</div>
 	<div class="socio">
 		<h2 class="section__title">ми в соцмережах</h2>
@@ -293,7 +297,7 @@
 	</div>
 </div>
 <!-- END out-->
-
+<div class="push"></div>
 <div class="footer">
 	<div class="l_layout">
 		<a class="send__mail" href="mailto:admin@hosting.ua"><i></i>Написати нам</a>
