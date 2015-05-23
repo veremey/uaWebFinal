@@ -135,10 +135,35 @@ $(document).ready(function() {
 });
 //  end FORM VALIDATION
 
+// селект
+
+$(document).ready(function() {
 
 
+$(document).click(function() {
+        $(".js-drop ul").hide();
+        $(".js-select-list").hide();
+        $(".js-select").removeClass("is-active");
+    });
 
-// });
+   function drop_list() {
+       var drop = $(".js-drop");
+        drop.bind("click", function(event) {
+            $(this).find("ul").slideToggle("fast");
+            event.stopPropagation();
+        });
+        drop.find("li").bind("click", function(){
+            var id = $(this).attr("data-id");
+            var text = $(this).text();
+            $(this).parents(drop).find("button span").text(text);
+            $(this).parents(drop).find("input").val(id);
+        });
+    };
+    drop_list();
+
+});
+
+
 
 	console.log($('body').html());
 });

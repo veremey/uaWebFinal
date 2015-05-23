@@ -14,7 +14,7 @@
 <body>
 <!-- BEGIN  out-->
 <div class="out">
-	<div class="header">
+		<div class="header">
 		<div class="header__top">
 			<div class="l_layout">
 				<div class="tel">
@@ -25,8 +25,7 @@
 					<div class="lang">
 						<a href="#" class="is-active">укр</a>
 						<div class="sub__lang">
-							<a href="#">pl</a>
-							<a href="#">en</a>
+							<a href="#">ru</a>
 						</div>
 					</div>
 				</div>
@@ -57,12 +56,12 @@
 							</div>
 						</ul>
 					</li>
-					<li class="header__menu_item"><a href="#">новини</a></li>
+					<li class="header__menu_item"><a href="#" >новини</a></li>
 					<li class="header__menu_item"><a href="#">блог</a></li>
 					<li class="header__menu_item"><a href="#">про проект</a></li>
 				</ul>
 				<div class="header__search">
-					<input type="text" name="" class="header__search-inp">
+					<input type="text" name="any" value="" class="header__search-inp">
 					<button></button>
 				</div>
 			</div>
@@ -91,7 +90,7 @@
 					<div class="filter">
 						<div class="poll__form">
 							<h3>Виробник</h3>
-							<input class="btn" type="submit" value="ЗКИНУТИ"><i class="close"></i>
+							<input class="btn" id='hiden' type="submit" value="ЗКИНУТИ"><i class="close"></i>
 							<div class="radio-wrap">
 								<label class="radio">
 									<input type="radio" name="name" checked>
@@ -119,11 +118,15 @@
 						<div class="sort__all">
 							<p>Всього <a href="#">1025 </a> товарів </p>
 						</div>
-						<div class="sort__cattegory">
-							<p>Сортувати за:</p>
-							<a href="#" class="sort__choose">
-								Популярныстю
-							</a>
+						<div class="cart-sort__item">
+							<div class="drop-list js-drop">
+								<button class="drop-list__btn"><span>популярністю</span></button>
+								<input type="hidden" class="js-drop-list-input">
+								<ul class="drop-list__main">
+									<li data-id="1">популярністю</li>
+									<li data-id="2">Ціною</li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="point">
@@ -239,7 +242,7 @@
 
 </div>
 <!-- END out-->
-
+<div class="push"></div>
 <div class="footer">
 	<div class="l_layout">
 		<a class="send__mail" href="mailto:admin@hosting.ua"><i></i>Написати нам</a>
