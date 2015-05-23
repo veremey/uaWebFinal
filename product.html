@@ -8,6 +8,7 @@
 	<!-- <meta name="viewport" content="width=1200"> -->
 	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 	<meta name="viewport" content="initial-scale=1, user-scalable=no">
+	<script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
@@ -25,8 +26,7 @@
 					<div class="lang">
 						<a href="#" class="is-active">укр</a>
 						<div class="sub__lang">
-							<a href="#">pl</a>
-							<a href="#">en</a>
+							<a href="#">ru</a>
 						</div>
 					</div>
 				</div>
@@ -76,71 +76,81 @@
 				<a href="#">Сумки та рюкзаки</a> /
 				Рюкзак класичний
 			</div>
-			<div class="section">
-				<div class="big__wrap">
-					<div class="product">
-						<div class="catalog__img">
-							<img src="img/r1.png" alt="">
-						</div>
-						<div class="product__wrap">
-							<a href="#" class="product__item is-active">
-								<img src="img/r1.png" alt="">
-							</a>
-							<a href="#" class="product__item ">
-								<img src="img/r1.png" alt="">
-							</a>
-							<a href="#" class="product__item ">
-								<img src="img/r1.png" alt="">
-							</a>
-							<div class="clear"></div>
+
+
+
+			<div id="main">
+
+				<div class="main__wrap">
+					<div class="carousel box">
+						<div class="carousel__main  js-carousel">
+							<div><img src="img/r1.png" alt="img"></div>
+							<div><img src="img/r2.png" alt="img"></div>
+							<div><img src="img/r1.png" alt="img"></div>
+							<div><img src="img/r2.png" alt="img"></div>
+							<div><img src="img/r1.png" alt="img"></div>
+							<div><img src="img/r1.png" alt="img"></div>
 						</div>
 					</div>
-					<div class="info">
-						<h2>Derby 15.7 л класичний</h2>
-						<p><span>Матеріал:</span> 600 поліестер</p>
-						<p><span>Розміри</span> (ШхВхГ): 32 х 41 х 12 см</p>
-						<p><span>Об'єм:</span> 15.7 л</p>
-						<div class="info__color">
-							<p>Колір:</p>
-							<div class="info__color_check color_1 is-active"></div>
-							<div class="info__color_check color_2"></div>
-							<div class="info__color_check color_3"></div>
-							<div class="info__color_check color_4"></div>
+					<div class="clear"></div>
+						<div class="carousel__preview js-carousel-preview">
+							<div><img src="img/r1.png" width="85" height="85" alt="img"></div>
+							<div><img src="img/r2.png" width="85" height="85" alt="img"></div>
+							<div><img src="img/r1.png" width="85" height="85" alt="img"></div>
+							<div><img src="img/r2.png" width="85" height="85" alt="img"></div>
+							<div><img src="img/r1.png" width="85" height="85" alt="img"></div>
+							<div><img src="img/r1.png" width="85" height="85" alt="img"></div>
 						</div>
-						<p class="info__price">250 грн.</p>
-						<div class="socio__top">
-							<a href="#">
-								<img src="img/socio_f.png" alt="">
-							</a>
-							<span class="number">1k</span>
-						</div>
-						<div class="socio__top">
-							<a href="#">
-								<img src="img/socio_vk.png" alt="">
-							</a>
-							<span class="number">458</span>
-						</div>
-						<div class="socio__top">
-							<a href="#">
-								<img src="img/socio_tw.png" alt="">
-							</a>
-							<span class="number">458</span>
-						</div>
-					</div>
-					<div class="produce">
-						<h2>Виробник: </h2>
-						<img src="img/der.png" alt="">
-						<div class="clear"></div>
-						<a href="#" class="produce__site">http://www.derby.ua</a>
-						<p class="produce__locate">Украина, г. Киев, пр-т Гагарина, 23</p>
-						<p class="produce__tel">+38 (044) 292-7205, 296-2538 +38 (044) 296-1041</p>
-					</div>
-					<a href="#" class="map">
-						<img src="img/map.png" alt="">
-					</a>
 
 				</div>
 			</div>
+
+
+				<div class="info">
+					<h2>Derby 15.7 л класичний</h2>
+					<p><span>Матеріал:</span> 600 поліестер</p>
+					<p><span>Розміри</span> (ШхВхГ): 32 х 41 х 12 см</p>
+					<p><span>Об'єм:</span> 15.7 л</p>
+					<div class="info__color">
+						<p>Колір:</p>
+						<div class="info__color_check color_1 is-active"></div>
+						<div class="info__color_check color_2"></div>
+						<div class="info__color_check color_3"></div>
+						<div class="info__color_check color_4"></div>
+					</div>
+					<p class="info__price">250 грн.</p>
+					<div class="socio__top">
+						<a href="#">
+							<img src="img/socio_f.png" alt="">
+						</a>
+						<span class="number">1k</span>
+					</div>
+					<div class="socio__top">
+						<a href="#">
+							<img src="img/socio_vk.png" alt="">
+						</a>
+						<span class="number">458</span>
+					</div>
+					<div class="socio__top">
+						<a href="#">
+							<img src="img/socio_tw.png" alt="">
+						</a>
+						<span class="number">458</span>
+					</div>
+				</div>
+				<div class="produce">
+					<h2>Виробник: </h2>
+					<img src="img/der.png" alt="">
+					<div class="clear"></div>
+					<a href="#" class="produce__site">http://www.derby.ua</a>
+					<p class="produce__locate">Украина, г. Киев, пр-т Гагарина, 23</p>
+					<p class="produce__tel">+38 (044) 292-7205, 296-2538 +38 (044) 296-1041</p>
+				</div>
+					<div class="map" id="mapin">
+						<div id="map"  style="width: 298; height: 222px">
+						</div>
+					</div>
+			<div class="clear"></div>
 			<div class="inventory">
 					<h2>опис</h2>
 					<h3>Derby 15.7 л класичний</h3>
@@ -153,7 +163,7 @@
 
 </div>
 <!-- END out-->
-
+<div class="push"></div>
 <div class="footer">
 	<div class="l_layout">
 		<a class="send__mail" href="mailto:admin@hosting.ua"><i></i>Написати нам</a>
@@ -171,6 +181,6 @@
 	</div>
 	<div class="copy">© Интернет-каталог українських виробників «Купуй українське» 2015</div>
 </div>
-
+<script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>
 </html>

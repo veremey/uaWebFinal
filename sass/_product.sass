@@ -1,51 +1,152 @@
-.big__wrap
-	+clr
-.product
-	width: 355px
+// .big__wrap
+// 	+clr
+// .product
+// 	width: 355px
+// 	float: left
+// 	+clr
+// 	.catalog__img
+// 		width: 332px
+// 		height: 305px
+// 		padding-top: 30px
+// 		margin-bottom: 48px
+// 	&__wrap
+// 		position: relative
+// 		.is-active
+// 			border: 2px solid #2095ab
+// 		&:before,
+// 		&:after
+// 			content: ""
+// 			position: absolute
+// 			bottom: 40px
+// 		&:before
+// 			left: -28px
+// 			cursor: pointer
+// 			+s(get_left)
+// 		&:after
+// 			right: -28px
+// 			cursor: pointer
+// 			+s(get_right)
+// 	&__item
+// 		float: left
+// 		width: 85px
+// 		height: 85px
+// 		padding: 5px
+// 		-webkit-border-radius: 6px
+// 		border-radius: 6px
+// 		background-color: #FFF
+// 		overflow: hidden
+// 		margin-left: 30px
+// 		&:first-child
+// 			margin-left: 0
+// 		img
+// 			height: 85px
+// 			width: 85px
+// 	+clr
+
+
+#main
+	position: relative
+	margin-top: 40px
 	float: left
 	+clr
-	.catalog__img
-		width: 332px
-		height: 305px
-		padding-top: 30px
-		margin-bottom: 48px
-	&__wrap
-		position: relative
-		.is-active
-			border: 2px solid #2095ab
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-			bottom: 40px
-		&:before
-			left: -28px
-			cursor: pointer
-			+s(get_left)
-		&:after
-			right: -28px
-			cursor: pointer
-			+s(get_right)
-	&__item
-		float: left
-		width: 85px
-		height: 85px
-		padding: 5px
-		-webkit-border-radius: 6px
-		border-radius: 6px
-		background-color: #FFF
-		overflow: hidden
-		margin-left: 30px
-		&:first-child
-			margin-left: 0
-		img
-			height: 85px
-			width: 85px
+.main__wrap
+	position: relative
+	float: left
+	width: 318px
+	height: 400px
+	text-align: center
 	+clr
+.carousel
+	position: relative
+	margin: 0 auto
+	z-index: 2
+	width: 318px
+	float: left
+	text-align: center
+	border: 2px solid #ccc
+	-webkit-border-radius: 5px
+	border-radius: 5px
+	+clr
+	&__main
+		margin-bottom: 20px
+		z-index: 2
+		text-align: center
+		img
+			width: 270px
+			margin: 0 auto
+	&__preview
+		height: 86px
+		text-align: center
+		.slick-slide
+			cursor: pointer
+			margin: 10px -3px
+			width: 100px!important
+			+clr
+			&:hover
+				img
+					+opacity(1)
+			&.is-active
+				&:after
+					display: block
+				img
+					+opacity(1)
+			&:after
+				content: ""
+				position: absolute
+				display: none
+				z-index: 2
+				top: 0
+				right: 0
+				bottom: 0
+				left: 0
+			img
+				margin: 0 auto
+				+opacity(.8)
+		.slick-list
+			// margin-top: -50px
+			padding-top: 25px
+			z-index: 2
+			height: 85px // ??
+			width: 285px
+		.slick-prev
+			left: 0px
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				left: 0px
+				z-index: 10
+				+opacity(1)
+			&:hover
+				&:before
+					+opacity(.8)
+		.slick-next
+			right: 0
+			&:before
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -25px
+				right: 0px
+				z-index: 10
+				+opacity(1)
+			&:hover
+				&:before
+					+opacity(.8)
+	+ .product
+		position: relative
+		top: -15px
+
+.product-wrap
+	+clr
+
+
+
 
 .info
 	width: 398px
-	margin: 0 30px 0 60px
+	margin: 30px 30px 0 60px
 	float: left
 	+clr
 	h2
@@ -97,6 +198,7 @@ p.info__price
 .produce
 	width: 300px
 	float: right
+	margin-top: 30px
 	+clr
 	h2
 		font-size: 20px
@@ -150,8 +252,10 @@ p.info__price
 	-webkit-border-radius: 5px
 	border-radius: 5px
 	overflow: hidden
-	float: left
-
+	float: right
+	width: 298px
+	height: 200px
+	+clr
 
 
 
