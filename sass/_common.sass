@@ -1,0 +1,415 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//          +sized-sprite($icons, coderiver) //or
+// 			+s(codedby) //gets default value for spritemap as $icons
+// ### animation example
+//     +include keyframes(rotate)
+//        from
+//           +rotate(0)
+//        to
+//           +rotate(360)
+// ## animation usage
+//     body:hover
+// 	    +animation(rotate 200s linear infinite)
+// ## animations easing, see easings.net for full list and examples, tnx @ai
+//     transition: all 1.2s ceaser($ease-in)
+// ## gradient example
+//     +background-image(linear-gradient(#232323, #5c5c5c));
+//     +g(#232323, #5c5c5c);
+//	   horizontal
+//     +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//			@extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +min-screen(320)
+//			display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//			width: 2em * $i;
+//     @each $s in a,b,c
+// 	    	#{$s}
+//				display: none
+// ## fonts
+// Save fonts to /css/fonts, after that write (eot, woff, ttf):
+// +font(book, cytiapro-black-webfont)
+// =book
+// 	font-family: "book", Arial, sans-serif
+// insert pics into css
+// div
+// 	+pic("blabla.png")
+// span
+// 	+png(blabla)
+// p
+// 	+jpg(bla)
+
+
+
+.header
+	+clr
+.header__top
+	border-bottom: 5px solid $blue
+	+clr
+.tel
+	float: left
+	position: relative
+	margin-left: 50px
+	color: #000
+	line-height: 64px
+	letter-spacing: .9px
+	+os
+	a
+		font-size: 18px
+		color: #3C3C3C
+		+os_ex
+		span
+			color: #828282
+		&:hover
+			opacity: .8
+	i
+		position: absolute
+		top: 22px
+		left: -37px
+		+s(tel)
+.header__top_right
+	width: 236px
+	float: right
+	+clr
+.send__mail
+	position: relative
+	color: #3C3C3C
+	float: left
+	margin-top: 25px
+	+os_ex
+	&:hover
+		opacity: .8
+	i
+		position: absolute
+		top: 1px
+		left: -44px
+		+s(letter)
+.lang
+	float: right
+	position: relative
+	width: 80px
+	height: 66px
+	padding-right: 10px
+	margin-top: -3px
+	bottom: -3px
+	border-right: 1px solid #b6b6b6
+	border-left: 1px solid #b6b6b6
+	text-align: center
+	text-transform: uppercase
+	+os_ex
+	+clr
+	&:hover
+		border-color: #8C8D8D
+		background-color: #8C8D8D
+		.is-active
+			color: #fff
+			&:after
+				top: 32px
+				+arr(13, 7, $blue, t)
+		.sub__lang
+			display: block
+			height: auto
+	.is-active
+		position: relative
+		display: block
+		line-height: 68px
+		color: #3C3C3C
+		+os_ex
+		&:after
+			content: ""
+			position: absolute
+			top: 32px
+			left: 62px
+			+arr(13, 7, $blue, b)
+		&:hover
+			color: #fff
+			background-color: #8C8D8D
+.sub__lang
+	float: right
+	position: absolute
+	right: -1px
+	top: 68px
+	display: none
+	width: 92px
+	height: 0
+	background-color: #8C8D8D
+	z-index: 3
+	+os_ex
+	+clr
+	&:hover
+		display: block
+	a
+		display: block
+		padding-bottom: 30px
+		color: #fff
+		&:hover
+			color: $blue
+			background: darken(#8C8D8D, 10%)
+.header__bottom
+	position: relative
+	background-color: rgba(255, 255, 255, .5)
+	border-bottom: 3px solid $yellow
+	+clr
+.logo
+	float: left
+	width: 320px
+	img
+		float: left
+		margin: 17px 16px 0 0
+	h1
+		font-size: 24px
+		color: #3A3A3A
+		line-height: 105px
+		+v
+.header__menu
+	font-size: 0
+	float: left
+	&_item
+		display: inline-block
+		> a
+			color: #3b3b3b
+			font-size: 16px
+			line-height: 105px
+			padding: 0 30px
+			text-transform: uppercase
+			+os_ex
+		&:hover
+			background-color: #4dcae2
+			+tr(.4s)
+			> a
+				color: #fff
+			.has_sub
+				&:after
+					top: 10px
+					+arr(13,7, #fff, t)
+			.submenu
+				display: block
+				z-index: 9
+.has_sub
+	position: relative
+	color: #FFF
+	&:after
+		content: ""
+		position: absolute
+		top: 11px
+		right: 8px
+		+arr(13,7, $blue, b)
+.submenu
+	display: none
+	position: absolute
+	top: 105px
+	left: 0
+	width: 100%
+	background-color: #fff
+	border-top: 3px solid $yellow
+	padding: 60px 0 45px
+	li
+		display: inline-block
+		width: 260px
+		margin-bottom: 25px
+	a
+		display: block
+		position: relative
+		line-height: 47px
+		color: #323232
+		font-size: 16px
+		margin-left: 65px
+		+os_ex
+		&:before
+			content: ""
+			position: absolute
+			top: -2px
+			left: -70px
+		&:hover
+			color: $blue
+.submenu__link1
+	&:before
+		+s(1)
+.submenu__link2
+	&:before
+		+s(2)
+.submenu__link3
+	&:before
+		+s(3)
+.submenu__link4
+	&:before
+		+s(4)
+.submenu__link5
+	&:before
+		+s(5)
+.submenu__link6
+	&:before
+		+s(6)
+.submenu__link7
+	&:before
+		+s(7)
+.submenu__link8
+	&:before
+		+s(8)
+.submenu__link9
+	&:before
+		+s(9)
+.submenu__link10
+	&:before
+		+s(10)
+.submenu__link11
+	&:before
+		+s(11)
+.submenu__link12
+	&:before
+		+s(12)
+.header__search
+	position: relative
+	&-inp
+		width: 209px
+		height: 39px
+		float: right
+		margin-top: 32px
+		padding: 0 40px 0 10px
+		background-color: #fff
+		border: 1px solid #898989
+		font-size: 15px
+		color: #3b3b3b
+		@include border-radius(5px)
+		@include background-clip(padding-box)
+		+os_ex
+		+ button
+			position: absolute
+			top: 42px
+			right: 10px
+			+s(lupa)
+
+
+
+// FOOTER
+
+.footer
+	border-top: 4px solid $yellow
+	.send__mail
+		margin: 52px 50px 0 55px
+		text-transform: uppercase
+		+os_ex
+		i
+			left: -55px
+			+s(letter_b)
+	+clr
+.footer__menu
+	font-size: 0
+	float: left
+	li
+		display: inline-block
+		padding: 0 35px
+		a
+			font-size: 16px
+			text-transform: uppercase
+			line-height: 123px
+			color: #3C3C3C
+			+os_ex
+			&:hover
+				color: $blue
+.social
+	float: right
+	margin-top: 40px
+	+clr
+	a
+		display: inline-block
+		margin-left: 15px
+		&:hover
+			opacity: 0.8
+	@each $s in vk, f, tw
+		.social__#{$s}
+			+s(#{$s})
+.copy
+	border-top: 1px solid #c3c3c3
+	line-height: 67px
+	font-size: 14px
+	text-align: center
+	color: #575757
+	+os_sem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,186 @@
+.big__wrap
+	+clr
+.product
+	width: 355px
+	float: left
+	+clr
+	.catalog__img
+		width: 332px
+		height: 305px
+		padding-top: 30px
+		margin-bottom: 48px
+	&__wrap
+		position: relative
+		.is-active
+			border: 2px solid #2095ab
+		&:before,
+		&:after
+			content: ""
+			position: absolute
+			bottom: 40px
+		&:before
+			left: -28px
+			cursor: pointer
+			+s(get_left)
+		&:after
+			right: -28px
+			cursor: pointer
+			+s(get_right)
+	&__item
+		float: left
+		width: 85px
+		height: 85px
+		padding: 5px
+		-webkit-border-radius: 6px
+		border-radius: 6px
+		background-color: #FFF
+		overflow: hidden
+		margin-left: 30px
+		&:first-child
+			margin-left: 0
+		img
+			height: 85px
+			width: 85px
+	+clr
+
+.info
+	width: 398px
+	margin: 0 30px 0 60px
+	float: left
+	+clr
+	h2
+		color: #000
+		margin-bottom: 35px
+		+os_ex
+	p
+		font-size: 16px
+		color: #000
+		margin-top: 3px
+		+os
+		span
+			+os_bold
+	&__color
+		+clr
+		p
+			font-size: 16px
+			color: #000
+			margin-top: 25px
+			+os_bold
+		.is-active
+			border: 2px solid #3f3f3f
+		&_check
+			display: inline-block
+			width: 26px
+			height: 26px
+			margin-top: 15px
+			margin-right: 15px
+			-webkit-border-radius: 50%
+			border-radius: 50%
+	.socio__top
+		display: inline-block
+		margin: 0 30px 20px 0
+.color_1
+	background-color: #8141b8
+.color_2
+	background-color: #5476c2
+.color_3
+	background-color: #e9d41f
+.color_4
+	background-color: #e7302c
+p.info__price
+	color: $red
+	font-size: 25px
+	margin: 40px 0
+	padding-bottom: 40px
+	border-bottom: 1px solid #616161
+	+os_ex
+.produce
+	width: 300px
+	float: right
+	+clr
+	h2
+		font-size: 20px
+		color: #424242
+		+os_bold
+	img
+		margin: 10px -17px 30px
+
+.produce__site
+	position: relative
+	display: inline-block
+	text-align: left
+	color: $blue
+	margin-bottom: 25px
+	margin-left: 40px
+	border-bottom: 1px solid $blue
+	&:hover
+		border-bottom: 1px solid $n
+	&:before
+		content: ''
+		position: absolute
+		top: -5px
+		left: -40px
+		+s(plan)
+
+.produce__locate
+	position: relative
+	width: 190px
+	margin-bottom: 25px
+	padding-left: 40px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 4px
+		+s(pin)
+
+.produce__tel
+	position: relative
+	width: 240px
+	margin-bottom: 25px
+	padding-left: 40px
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		left: 4px
+		+s(tele)
+
+.map
+	-webkit-border-radius: 5px
+	border-radius: 5px
+	overflow: hidden
+	float: left
+
+
+
+
+
+
+.inventory
+	font-size: 22px
+	color: #000
+	margin-top: 35px
+	h2
+		font-size: 22px
+		text-transform: uppercase
+		margin-bottom: 15px
+		+os_ex
+	h3
+		font-size: 17px
+		text-transform: uppercase
+		margin-bottom: 5px
+		+os_bold
+	p
+		font-size: 16px
+		line-height: 19px
+		+os
+	a
+		display: inline-block
+		font-size: 18px
+		color: $blue
+		margin: 20px 0 60px
+		border-bottom: 1px dashed $blue
+		+os_sem
+		&:hover
+			border-bottom: 1px solid $n

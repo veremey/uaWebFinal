@@ -1,0 +1,306 @@
+.baner
+	padding: 60px 0 65px
+	background: url("../img/pattern.png") repeat  0 40% $blue
+	+clr
+.baner__content
+	position: relative
+	width: 585px
+	padding: 20px 80px 50px
+	background-color: rgba(235, 235, 235, .66)
+	-webkit-border-radius: 5px
+	border-radius: 5px
+	margin: 0 auto
+	&:before,
+	&:after
+		content: ""
+		position: absolute
+		top: 50%
+		margin-top: -4%
+	&:before
+		left: -210px
+		+s(ban_l)
+	&:after
+		right: -210px
+		+s(ban_r)
+.baner__content_top
+	position: relative
+	text-align: center
+	padding-bottom: 15px
+	margin-bottom: 40px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -10px
+		left: 50%
+		width: 120px
+		height: 5px
+		margin-left: -60px
+		background-color: $red
+	h2
+		margin: 35px 0 5px
+		font-size: 49px
+		color: #404040
+		+m
+	p
+		color: #3C4C4F
+		font-size: 18px
+		margin: 10px 0
+		+os
+.baner__content_bottom
+	text-align: center
+	p
+		font-size: 18px
+		color: #181818
+		+ps
+
+.main
+	padding-top: 35px
+	+clr
+.ban
+	position: relative
+	display: inline-block
+	width: 350px
+	height: 420px
+	-webkit-border-radius: 6px
+	border-radius: 6px
+	background-color: #FFF
+	overflow: hidden //del
+	margin: 0 44px 40px 0
+	&:hover
+		img
+			+scale(1.1)
+			+tr(.4s)
+	&:nth-child(3n)
+		margin-right: 0
+	&__img
+		position: absolute
+		width: 500px
+		text-align: center
+		left: 50%
+		margin-left: -250px
+	span
+		font-style: normal
+		+os_ex
+
+.ban__contant
+	position: absolute
+	max-width: 295px
+	bottom: 25px
+	left: 30px
+	p
+		display: inline
+		color: #181818
+		font-size: 21px
+		line-height: 31px
+		background-color: #FFF
+		padding: 5px
+		+os_sem
+	h3
+		display: inline-block
+		font-size: 21px
+		color: #181818
+		background-color: #fff
+		padding: 5px
+		text-transform: uppercase
+		+os_ex
+.line
+	width: 52px
+	height: 5px
+	margin: 5px auto 20px
+	&__red
+		background-color: $red
+		&_thin
+			height: 3px
+			background-color: $red
+			margin-bottom: 10px
+	&__blue
+		background-color: $blue
+		&_thin
+			height: 3px
+			background-color: $blue
+			margin-bottom: 10px
+	&__yellow
+		background-color: $yellow
+		&_thin
+			height: 3px
+			background-color: $yellow
+			margin-bottom: 10px
+.answer
+	text-align: center
+	img
+		display: block
+		text-align: center
+		margin: 75px auto
+	h3
+		max-width: 275px
+		font-size: 30px
+		text-transform: uppercase
+		margin: 0 auto
+		+os_ex
+	p
+		width: 270px
+		margin: 0 auto
+		font-size: 18px
+		line-height: 29px
+		+os
+	.ban__contant
+		bottom: 54px
+	.line
+		margin: 10px auto 15px
+.ban__border
+	border: 1px solid #989898
+	text-align: center
+	.ban__contant
+		bottom: 20px
+
+
+
+
+
+
+h3.t_red
+	color: $red
+.t35
+	top: 35px
+
+
+// section
+
+
+.section
+	margin-top: 37px
+	+clr
+	&__content
+		margin-bottom: 55px
+	&__title
+		position: relative
+		font-size: 28px
+		color: #181818
+		text-transform: uppercase
+		margin-bottom: 20px
+		text-align: center
+		+m
+		&:before,
+		&:after
+			content: ""
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			top: 2px
+			+s(sl_romb)
+		&:before,
+			left: -37px
+		&:after
+			right: -37px
+	&__item
+		display: inline-block
+		width: 260px
+		margin: 35px 32px 0 0
+		&:nth-child(4n)
+			margin-right: 0
+		h3
+			font-size: 18px
+			line-height: 26px
+			text-transform: uppercase
+			color: $text
+			+os_ex
+		p
+			font-size: 16px
+			color: $text
+			margin-top: 25px
+			+ps
+		+clr
+.subscribe
+	padding: 20px 0 40px
+	background: url("../img/pattern.png") repeat 0 55% $blue
+	text-align: center
+	h3
+		color: #FFF
+		font-size: 28px
+		text-transform: uppercase
+	p
+		width: 360px
+		font-size: 18px
+		color: #FFF
+		margin: 0 auto
+		+os
+.subscribe__form
+	margin-top: 33px
+	input
+		width: 388px
+		height: 47px
+		padding: 0 15px
+		border-radius: 5px
+		border: 1px solid #fff
+		background-color: $n
+		font-size: 18px
+		margin-right: 25px
+		color: #fff
+		+os
+		+placeholder-color(#fff)
+	button
+		height: 50px
+		width: 226px
+		border-radius: 7px
+		color: #585757
+		background-color: #fff
+		font-size: 20px
+		+os_bold
+
+
+.socio
+	margin-top: 45px
+	+clr
+	&__wrap
+		margin: 74px 0 67px
+	&__container
+		width: 277px
+		margin-right: 10px
+		float: left
+		+clr
+	&__top
+		margin-bottom: 5px
+		+clr
+		p
+			float: left
+			font-size: 17px
+			color: #757575
+			font-style: normal
+			line-height: 41px
+			+os_sem
+		a
+			float: left
+			margin-left: 5px
+			img
+				float: left
+			&:hover
+				opacity: 0.8
+		span
+			float: left
+			position: relative
+			line-height: 38px
+			font-size: 18px
+			color: #757575
+			margin-left: 10px
+			border: 2px solid #7d7d7d
+			-webkit-border-radius: 5px
+			border-radius: 5px
+			padding: 0 10px
+			+os_bold
+			&:before
+				content: ""
+				position: absolute
+				top: 3px
+				left: -8px
+				+s(social_bdr)
+	&__bottom
+		color: #454545
+		p
+			font-size: 16px
+			+os
+		a
+			color: #454545
+			+os_bold
+			&:hover
+				color: $blue
+		+clr
